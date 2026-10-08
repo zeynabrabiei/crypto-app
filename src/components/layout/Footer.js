@@ -53,10 +53,10 @@ export default function Footer() {
 
           <div className="flex gap-16 sm:gap-24">
             <nav aria-label="Footer">
-              <h2 className="text-xs font-medium uppercase tracking-wider text-zinc-500">Explore</h2>
+              <h2 className="text-xs font-medium uppercase tracking-wider ">Explore</h2>
               <ul className="mt-4 space-y-3">
                 {nav.map(([href, label]) => (
-                  <li key={href}><Link href={href} className={link}>{label}</Link></li>
+                  <li key={href} className=" hover:bg-emerald-400/10 hover:text-emerald-300"><Link href={href} className={link}>{label}</Link></li>
                 ))}
               </ul>
             </nav>
