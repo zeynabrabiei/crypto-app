@@ -93,7 +93,7 @@ export default function Footer() {
                       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                       className={socialLink}
                     >
-                      <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="currentColor" aria-hidden>
+                      <svg viewBox="0 0 24 24" className="h-4.5 w-4.5" fill="currentColor" aria-hidden>
                         {icon}
                       </svg>
                     </a>
