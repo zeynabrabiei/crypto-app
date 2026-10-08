@@ -1,9 +1,5 @@
-import React from 'react'
+import { PageSkeleton } from "@/components/ui/Skeletons";
 
-function loading() {
-  return (
-    <div>loading</div>
-  )
+export default function Loading() {
+  return <PageSkeleton count={12} />;
 }
-
-export default loading

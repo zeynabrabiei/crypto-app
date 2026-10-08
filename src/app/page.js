@@ -5,7 +5,7 @@ import Change from "@/components/ui/Change";
 import { getChart, getGlobal, getMarkets } from "@/lib/api";
 import { card, compact, usd, wrap } from "@/lib/utils";
 
-export const revalidate = 60;
+// export const revalidate = 60;
 
 export default async function HomePage() {
   const [coins, global, btc] = await Promise.all([

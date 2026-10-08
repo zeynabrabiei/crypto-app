@@ -50,7 +50,7 @@ export default async function CoinPage({ params }) {
             <p className="text-sm uppercase text-zinc-500">{coin.symbol}</p>
           </div>
         </div>
-        <FavoriteButton id={coin.id} name={coin.name} className="!h-11 !w-11" />
+        <FavoriteButton id={coin.id} name={coin.name} className="h-11! w-11!" />
       </div>
 
       <div className="mt-6 flex flex-wrap items-baseline gap-3">
