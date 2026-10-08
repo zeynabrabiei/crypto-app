@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 export const metadata = {
   title: { default: "Chainfolio — Crypto Market Dashboard", template: "%s · Chainfolio" },
   description: "Track live crypto prices, explore market data and charts, and save your favorite coins.",
+  icons:{
+    icon:"/icon.svg"
+  },
   openGraph: {
     title: "Chainfolio — Crypto Market Dashboard",
     description: "Live prices, charts and favorites powered by CoinGecko.",
