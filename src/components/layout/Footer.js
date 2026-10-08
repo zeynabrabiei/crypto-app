@@ -34,16 +34,28 @@ const socials = [
   },
 ];
 
-const link = "text-sm text-zinc-400 transition-colors hover:text-white";
+const navLink =
+  "inline-block text-sm text-zinc-400! transition duration-200 hover:translate-x-0.5 hover:text-emerald-300! focus-visible:text-emerald-300!";
+
+const socialLink =
+  "grid h-10 w-10 place-items-center rounded-xl border border-white/10 text-zinc-400! transition duration-200 hover:-translate-y-0.5 hover:border-emerald-400/40 hover:bg-emerald-400/10 hover:text-emerald-300! focus-visible:text-emerald-300!";
 
 export default function Footer() {
   return (
-    <footer className="mt-20 border-t border-white/10">
+    <footer className="mt-20 border-t border-white/10 bg-zinc-950">
       <div className={`${wrap} py-12`}>
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
-            <Link href="/" className="inline-flex items-center gap-2 font-semibold tracking-tight">
-              <span className="grid h-8 w-8 place-items-center rounded-lg bg-emerald-400 text-zinc-950" aria-hidden>◆</span>
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 font-semibold tracking-tight text-zinc-100!"
+            >
+              <span
+                className="grid h-8 w-8 place-items-center rounded-lg bg-emerald-400 text-zinc-950"
+                aria-hidden
+              >
+                ◆
+              </span>
               CoinX Market
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-zinc-400">
@@ -53,16 +65,24 @@ export default function Footer() {
 
           <div className="flex gap-16 sm:gap-24">
             <nav aria-label="Footer">
-              <h2 className="text-xs font-medium uppercase tracking-wider ">Explore</h2>
+              <h2 className="text-xs font-medium uppercase tracking-wider text-zinc-500">
+                Explore
+              </h2>
               <ul className="mt-4 space-y-3">
                 {nav.map(([href, label]) => (
-                  <li key={href} className=" hover:bg-emerald-400/10 hover:text-emerald-300"><Link href={href} className={link}>{label}</Link></li>
+                  <li key={href}>
+                    <Link href={href} className={navLink}>
+                      {label}
+                    </Link>
+                  </li>
                 ))}
               </ul>
             </nav>
 
             <div>
-              <h2 className="text-xs font-medium uppercase tracking-wider text-zinc-500">Connect</h2>
+              <h2 className="text-xs font-medium uppercase tracking-wider text-zinc-500">
+                Connect
+              </h2>
               <ul className="mt-4 flex gap-2">
                 {socials.map(({ label, href, external, icon }) => (
                   <li key={label}>
@@ -71,9 +91,11 @@ export default function Footer() {
                       aria-label={label}
                       title={label}
                       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                      className="grid h-10 w-10 place-items-center rounded-xl border border-white/10 text-zinc-400 transition duration-200 hover:-translate-y-0.5 hover:border-emerald-400/40 hover:bg-emerald-400/10 hover:text-emerald-300"
+                      className={socialLink}
                     >
-                      <svg viewBox="0 0 24 24" className="h-4.5 w-4.5" fill="currentColor" aria-hidden>{icon}</svg>
+                      <svg viewBox="0 0 24 24" className="h-[18px] w-[18px]" fill="currentColor" aria-hidden>
+                        {icon}
+                      </svg>
                     </a>
                   </li>
                 ))}
@@ -89,7 +111,7 @@ export default function Footer() {
               href="https://github.com/zeynabrabiei"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-zinc-300 transition-colors hover:text-emerald-300"
+              className="text-zinc-300! transition-colors hover:text-emerald-300!"
             >
               Zeynab Rabiei
             </a>
