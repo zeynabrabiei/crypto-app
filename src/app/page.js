@@ -5,11 +5,11 @@ import Change from "@/components/ui/Change";
 import { getChart, getGlobal, getMarkets } from "@/lib/api";
 import { card, compact, usd, wrap } from "@/lib/utils";
 
-// export const revalidate = 60;
-
 export default async function HomePage() {
   const [coins, global, btc] = await Promise.all([
-    getMarkets({ perPage: 8 }), getGlobal(), getChart("bitcoin", 30),
+    getMarkets({ perPage: 8 }),
+    getGlobal(),
+    getChart("bitcoin", 30),
   ]);
   const g = global.data;
   const prices = btc.prices.map((p) => p[1]);
