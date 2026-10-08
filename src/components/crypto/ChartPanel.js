@@ -36,9 +36,9 @@ export default function ChartPanel({ id, name, initial }) {
           ))}
         </div>
       </div>
-      {state === "loading" ? <Bar className="h-[22rem] w-full rounded-xl" />
+      {state === "loading" ? <Bar className="h-88 w-full rounded-xl" />
         : state === "error" ? (
-          <div className="grid h-[22rem] place-items-center text-center text-sm text-zinc-400">
+          <div className="grid h-88 place-items-center text-center text-sm text-zinc-400">
             <div>
               <p>The chart couldn&apos;t be loaded right now.</p>
               <button onClick={() => select(days)} className="mt-3 rounded-lg bg-white/10 px-4 py-2 text-white hover:bg-white/15">Retry</button>

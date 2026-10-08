@@ -37,6 +37,6 @@ export const DetailsSkeleton = () => (
     <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
       {Array.from({ length: 4 }, (_, i) => <Bar key={i} className="h-24 rounded-2xl" />)}
     </div>
-    <Bar className="mt-6 h-[26rem] rounded-2xl" />
+    <Bar className="mt-6 h-104 rounded-2xl" />
   </div>
 );
