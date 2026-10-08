@@ -1,9 +1,6 @@
-import React from 'react'
+"use client";
+import ErrorState from "@/components/ui/ErrorState";
 
-function error() {
-  return (
-    <div>error</div>
-  )
+export default function Error({ reset }) {
+  return <ErrorState reset={reset} />;
 }
-
-export default error
